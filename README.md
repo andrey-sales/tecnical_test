@@ -34,7 +34,27 @@ Para testes E2E, foi utilizado o integration_test. Nesse teste, eu escrevi os 5 
 • ***Favoritar:***  flutter test integration_test/products/favorite_test.dart  
 • ***Pesquisar e Filtrar:***  flutter test integration_test/products/search_test.dart  
 • ***Visualizar detalhes:*** flutter test integration_test/products/details_test.dart  
-• ***Favoritar na Página de Detalhes:*** flutter test integration_test/products/details_favorite_test.dart  
+• ***Favoritar na Página de Detalhes:*** flutter test integration_test/products/details_favorite_test.dart 
+
+## Preveção de Erros, tratamentos e desenvolvimento de soluções
+
+• Pesquisar: para a avaliação do pesquisar, haviam dois requisitos a serem seguidos: debounce e filtragem. Durante o processo em que iniciamos a aplicação, a lista inicial é preenchida para que reflita o visual de uma verdadeira loja de ecommerce. Sempre devemos oferecer algum item inicialmente para atrair a atenção do usuário.
+
+Caso de Uso 1: Aplicar ***debounce*** no momento da ***pesquisa*** para que a pesquisa seja realizada ***SOMENTE*** quando o
+usuário terminar de digitar.
+
+Para esse caso, vamos pensar que um novo item seja incluso na base, ao pesquisar pelo nome desse item, ele irá popular a lista de pesquisa. Para solucionar isto, a lista inicial e a lista de pesquisa serão separadas, assim sempre teremos os nossos produtos disponíveis na loja e caso um novo produto seja pesquisado, ele será buscado na base para incluir na lista de pesquisa.
+
+Caso de Uso 2: A pesquisa deve ***atualizar*** a lista de produtos em ***tempo real*** conforme o usuário ***digitar***.
+
+Aqui, o componente de campo de busca terá um filtro que aplicará nas duas listas: inicial e pesquisa, assim mantendo os dois comportamentos esperados.
+
+Caso de Uso 3: Incluir um ícone de coração que permita ao usuário marcar/desmarcar o produto como favorito
+
+Como o funcionamento dele esta ligado diretamento a duas páginas, não vamos precisar criar uma nova controladora para a página de detalhes, apenas extender as funções da página inicial para que ela tenha a visualização e a função de favoritar.
+
+
+
 
 ## Layout e Responsividade
 
