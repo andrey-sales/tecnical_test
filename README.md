@@ -1,6 +1,6 @@
 # ecommerce
 
-A new Flutter project.
+Desafio tecnico para Engenheiro de Software Flutter III
 
 ## Getting Started
 
