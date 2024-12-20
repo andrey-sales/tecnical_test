@@ -53,6 +53,54 @@ Caso de Uso 3: Incluir um ícone de coração que permita ao usuário marcar/des
 
 Como o funcionamento dele esta ligado diretamento a duas páginas, não vamos precisar criar uma nova controladora para a página de detalhes, apenas extender as funções da página inicial para que ela tenha a visualização e a função de favoritar.
 
+Preveção de Erro 1:
+
+<img width="548" alt="Screenshot 2024-12-20 at 20 40 47" src="https://github.com/user-attachments/assets/62d87f6f-23c8-4ea7-ad9b-b145c932e0f1" />
+
+Vamos pensar que o valor de comentários esta limitado a no máximo 3 digitos. Se o valor aumentar para valores como 1.000, 1.000.000, 1.0000.000.000, o layout da linha irá se quebrar, para solucionar este problema foi aplicado na utilidade o valor para converter o contador para uma String que represente valores acima de 3 digitos:
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Resposta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>no reviews</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1 review</td>
+    </tr>
+    <tr>
+      <td>1,000</td>
+      <td>1K</td>
+    </tr>
+    <tr>
+      <td>1,000,000</td>
+      <td>1M</td>
+    </tr>
+    <tr>
+      <td>1,000,000,000</td>
+      <td>1B</td>
+    </tr>
+  </tbody>
+</table>
+
+Preveção de Erro 2:
+
+Você notou que as imagens elas carregam várias vezes durante as inicializações? Para isso, vamos adicionar cash para permitir que elas se mantenham durante as atualizações, sem a a necessidade de aguardar que todas as telas carreguem suas URLs. 
+
+***Para essa solução:*** https://pub.dev/packages/cached_network_image
+
+Tratamento 1:
+
+Ao realizar o get produtos, eu não sabia o tamanho da massa de dados. Normalmente pensamos que pode ser algo do tipo 5 produtos ou 300 produtos. Para esse tratamento foi aplicado um conceito chamado de ***paralelimos/Thread*** (no dart chamamos isso de ***Isolate***). É um método simples apenas para receber e ao mesmo tempo executar a tarefa de conversão do produto.
+
+
 
 
 
