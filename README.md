@@ -14,11 +14,27 @@ Bom, mas será que isso faria alguma diferença? Sim. Quando solicitaram o consu
 
 Para esta avaliação foi solicitada a utilização do shared preferences para armazenamento local e avaliação. Nesse ponto, eu apliquei mais um pouco de experiência. O sharedPreference armazena os dados localmente em um arquivo xml para consulta. O irmão dele, o EncryptedSharedPreference realiza a criptação e desincriptação dos dados durante o processo. Aqui a escolha foi utilizar o EncrypedSharedPreferences por colocar como ponto de importancia um conceito que hoje avaliamos com essencial para o cargo. O EncrypedSharedPreference pode ser encontrado no Pacote flutter_secure_storage, facilitando e reduzindo o tempo para criar a logica de criptografia ou separar uma classe de utilidade e importar o pacote criptor.
 
-Referencia: https://developer.android.com/reference/android/content/SharedPreferences 
+Por outro lado, utilizei sharedpreference para criar uma instância mockada da base local. Digamos que eu utilizei o SharedPreference nos testes Unitários e na produção eu coloquei EncrypedSharedPreference. :D 
 
-Referencia: https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences
+***Referencia:*** https://developer.android.com/reference/android/content/SharedPreferences 
 
-url: https://pub.dev/packages/flutter_secure_storage
+***Referencia:*** https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences
+
+***url:*** https://pub.dev/packages/flutter_secure_storage
+
+## Testes
+
+Foram incluídos testes unitários e testes E2E para avaliação. O pacote utilizado para a criação dos testes unitários foi o flutter_test. (sem mockito). Como, eram necessários criar testes que cubram as regras de negócio como um todo (Enterprise e Application).
+
+***Comando: flutter test***
+
+Para testes E2E, foi utilizado o integration_test. Nesse teste, eu escrevi os 5 cenarios de uso da aplicação:
+
+• ***Listar produtos:*** flutter test integration_test/products/list_product_test.dart  
+• ***Favoritar:***  flutter test integration_test/products/favorite_test.dart  
+• ***Pesquisar e Filtrar:***  flutter test integration_test/products/search_test.dart  
+• ***Visualizar detalhes:*** flutter test integration_test/products/details_test.dart  
+• ***Favoritar na Página de Detalhes:*** flutter test integration_test/products/details_favorite_test.dart  
 
 ## Inicio
 
