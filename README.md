@@ -2,6 +2,24 @@
 
 Desafio tecnico para Engenheiro de Software Flutter III
 
+## Gerenciamento de Estado e Arquitetura
+
+O gerenciamento de estado utilizado para o projeto e avaliação tecnica foi mobx. Para o modelo arquitetural, eu estava pensando em MVVM (já anunciado pela google como uma arquitetura padrão de projetos) ou o clean architecture. A minha decisão foi ir para o clean pela base teoria dele ajudar a solucionar problemas. Acredito que a base teorica que o uncle bob passou nos livros e na série ajudaram nessa decisão. 
+
+Bom, mas será que isso faria alguma diferença? Sim. Quando solicitaram o consumo local e remoto de dados, me veio o pensamento de fazer as duas externais separadas. Normalmente, um projeto que aplica conceitos de offline first tem suas bases propositalmente separadas para facilitar manutenções e implementações.
+
+<img src=https://github.com/user-attachments/assets/d9e2791a-1d09-472e-b23b-e14680f0e99e width=400/>
+
+## SharedPreference ou EncryptedSharedPreferences
+
+Para esta avaliação foi solicitada a utilização do shared preferences para armazenamento local e avaliação. Nesse ponto, eu apliquei mais um pouco de experiência. O sharedPreference armazena os dados localmente em um arquivo xml para consulta. O irmão dele, o EncryptedSharedPreference realiza a criptação e desincriptação dos dados durante o processo. Aqui a escolha foi utilizar o EncrypedSharedPreferences por colocar como ponto de importancia um conceito que hoje avaliamos com essencial para o cargo. O EncrypedSharedPreference pode ser encontrado no Pacote flutter_secure_storage, facilitando e reduzindo o tempo para criar a logica de criptografia ou separar uma classe de utilidade e importar o pacote criptor.
+
+Referencia: https://developer.android.com/reference/android/content/SharedPreferences 
+
+Referencia: https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences
+
+url: https://pub.dev/packages/flutter_secure_storage
+
 ## Inicio
 
 <table>
