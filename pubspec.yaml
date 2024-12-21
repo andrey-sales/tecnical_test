@@ -24,8 +24,6 @@ dependencies:
   flutter_svg: ^2.0.16
   cupertino_icons: ^1.0.8
 
-  mockito: ^5.4.5
-
   shared_preferences: ^2.3.4
 
 
