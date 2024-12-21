@@ -40,20 +40,20 @@ Para testes E2E, foi utilizado o integration_test. Nesse teste, eu escrevi os 5 
 
 • Pesquisar: para a avaliação do pesquisar, haviam dois requisitos a serem seguidos: debounce e filtragem. Durante o processo em que iniciamos a aplicação, a lista inicial é preenchida para que reflita o visual de uma verdadeira loja de ecommerce. Sempre devemos oferecer algum item inicialmente para atrair a atenção do usuário.
 
-Caso de Uso 1: Aplicar ***debounce*** no momento da ***pesquisa*** para que a pesquisa seja realizada ***SOMENTE*** quando o
+***Caso de Uso 1:*** Aplicar ***debounce*** no momento da ***pesquisa*** para que a pesquisa seja realizada ***SOMENTE*** quando o
 usuário terminar de digitar.
 
 Para esse caso, vamos pensar que um novo item seja incluso na base, ao pesquisar pelo nome desse item, ele irá popular a lista de pesquisa. Para solucionar isto, a lista inicial e a lista de pesquisa serão separadas, assim sempre teremos os nossos produtos disponíveis na loja e caso um novo produto seja pesquisado, ele será buscado na base para incluir na lista de pesquisa.
 
-Caso de Uso 2: A pesquisa deve ***atualizar*** a lista de produtos em ***tempo real*** conforme o usuário ***digitar***.
+***Caso de Uso 2:*** A pesquisa deve ***atualizar*** a lista de produtos em ***tempo real*** conforme o usuário ***digitar***.
 
 Aqui, o componente de campo de busca terá um filtro que aplicará nas duas listas: inicial e pesquisa, assim mantendo os dois comportamentos esperados.
 
-Caso de Uso 3: Incluir um ícone de coração que permita ao usuário marcar/desmarcar o produto como favorito
+***Caso de Uso 3:*** Incluir um ícone de coração que permita ao usuário marcar/desmarcar o produto como favorito
 
 Como o funcionamento dele esta ligado diretamento a duas páginas, não vamos precisar criar uma nova controladora para a página de detalhes, apenas extender as funções da página inicial para que ela tenha a visualização e a função de favoritar.
 
-Preveção de Erro 1:
+***Preveção de Erro 1:***
 
 <img width="548" alt="Screenshot 2024-12-20 at 20 40 47" src="https://github.com/user-attachments/assets/62d87f6f-23c8-4ea7-ad9b-b145c932e0f1" />
 
@@ -90,25 +90,25 @@ Vamos pensar que o valor de comentários esta limitado a no máximo 3 digitos. S
   </tbody>
 </table>
 
-Preveção de Erro 2:
+***Preveção de Erro 2:***
 
 Você notou que as imagens elas carregam várias vezes durante as inicializações? Para isso, vamos adicionar cash para permitir que elas se mantenham durante as atualizações, sem a a necessidade de aguardar que todas as telas carreguem suas URLs. 
 
 ***Para essa solução:*** https://pub.dev/packages/cached_network_image
 
-Tratamento 1:
+***Tratamento 1:***
 
 Ao realizar o get produtos, eu não sabia o tamanho da massa de dados. Normalmente pensamos que pode ser algo do tipo 5 produtos ou 300 produtos. Para esse tratamento foi aplicado um conceito chamado de ***paralelimos/Thread*** (no dart chamamos isso de ***Isolate***). É um método simples apenas para receber e ao mesmo tempo executar a tarefa de conversão do produto.
 
 ***Documentação:*** https://docs.flutter.dev/perf/isolates
 
-Tratamento 2:
+***Tratamento 2:***
 
 Ao transformar o preço, o valor obtido deve ser em Dollar (Protótipo). Nesse caso, vamos aplicar um pacote chamado INTL para converter este valor e fazer o uso correto de pontos e vírgulas quando necessário.
 
 ***Package:*** https://pub.dev/packages/intl
 
-Tratamento 3:
+***Tratamento 3:***
 
 Mesmo criando o projeto atualizado, precisamos alterar algumas configurações do AGP para rodar em versões androids. Para isso vamos alterar a versão dele no settings.gradle
 
