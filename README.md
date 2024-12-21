@@ -24,11 +24,11 @@ Por outro lado, utilizei sharedpreference para criar uma instância mockada da b
 
 ## Testes
 
-Foram incluídos testes unitários e testes E2E para avaliação. O pacote utilizado para a criação dos testes unitários foi o flutter_test. (sem mockito). Como, eram necessários criar testes que cubram as regras de negócio como um todo (Enterprise e Application).
+Foram incluídos testes unitários e testes E2E com Componentes para avaliação. O pacote utilizado para a criação dos testes unitários foi o flutter_test. (sem mockito). Como, eram necessários criar testes que cubram as regras de negócio como um todo (Enterprise e Application).
 
 ***Comando: flutter test***
 
-Para testes E2E, foi utilizado o integration_test. Nesse teste, eu escrevi os 5 cenarios de uso da aplicação:
+Para testes E2E dos Componentes, foi utilizado o integration_test e flutter_test. Nesse teste, eu escrevi os 5 cenarios de uso da aplicação:
 
 • ***Listar produtos:*** flutter test integration_test/products/list_product_test.dart  
 • ***Favoritar:***  flutter test integration_test/products/favorite_test.dart  
@@ -52,6 +52,10 @@ Para esse caso, vamos pensar que um novo item seja incluso na base, ao pesquisar
 Aqui, o componente de campo de busca terá um filtro que aplicará nas duas listas: inicial e pesquisa, assim mantendo os dois comportamentos esperados.
 
 ***Caso de Uso 3:*** Incluir um ícone de coração que permita ao usuário marcar/desmarcar o produto como favorito
+
+***Caso de Uso 4:*** O campo de texto não deve limpar durante a navegação.
+
+Existem duas formas de fazer esse caso de uso. A primeira é utilizando um texteditingcontroller para manter o valor salvo no caso de uma atualização geral da tela. No meu caso, eu não utilizei porque o componente não recebe interferencias de outros componentes. A parte que vai sofrer com a atualização é a parte abaixo dele. Se por exemplo, ele precisasse desaparecer com a mudança de estado da tela, a solução seria o texteditingcontroller.
 
 Como o funcionamento dele esta ligado diretamento a duas páginas, não vamos precisar criar uma nova controladora para a página de detalhes, apenas extender as funções da página inicial para que ela tenha a visualização e a função de favoritar.
 
