@@ -24,7 +24,7 @@ Por outro lado, utilizei sharedpreference para criar uma instância mockada da b
 
 ## Testes
 
-Foram incluídos testes unitários e testes E2E com Componentes para avaliação. O pacote utilizado para a criação dos testes unitários foi o flutter_test. (sem mockito). Como, eram necessários criar testes que cubram as regras de negócio como um todo (Enterprise e Application).
+Foram incluídos testes unitários, teste de componente e testes E2E com Componentes para avaliação. O pacote utilizado para a criação dos testes unitários foi o flutter_test. (sem mockito). Como, eram necessários criar testes que cubram as regras de negócio como um todo (Enterprise e Application).
 
 ***Comando: flutter test***
 
