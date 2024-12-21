@@ -100,6 +100,14 @@ Tratamento 1:
 
 Ao realizar o get produtos, eu não sabia o tamanho da massa de dados. Normalmente pensamos que pode ser algo do tipo 5 produtos ou 300 produtos. Para esse tratamento foi aplicado um conceito chamado de ***paralelimos/Thread*** (no dart chamamos isso de ***Isolate***). É um método simples apenas para receber e ao mesmo tempo executar a tarefa de conversão do produto.
 
+***Documentação:*** https://docs.flutter.dev/perf/isolates
+
+Tratamento 2:
+
+Ao transformar o preço, o valor obtido deve ser em Dollar (Protótipo). Nesse caso, vamos aplicar um pacote chamado INTL para converter este valor e fazer o uso correto de pontos e vírgulas quando necessário.
+
+***Package:*** https://pub.dev/packages/intl
+
 
 
 
