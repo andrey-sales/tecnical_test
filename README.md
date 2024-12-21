@@ -126,17 +126,17 @@ Para se adapte adequadamente em diferentes tamanhos de tela, eu apliquei compone
 
   <tr>
     <td> <img src=https://github.com/user-attachments/assets/f8ed7f0c-1b8e-42eb-acc3-c606c88081b3  width=200/> </td>
-    <td> <img src=https://github.com/user-attachments/assets/8dfc2082-d983-45bb-b3d6-19b6dab15bf9  width=400/> </td>
+    <td> <img src=https://github.com/user-attachments/assets/8dfc2082-d983-45bb-b3d6-19b6dab15bf9  width=600/> </td>
   </tr>
 
   <tr>
     <td> <img src=https://github.com/user-attachments/assets/000d0155-066e-40d0-a593-aa21b36be271  width=200/> </td>
-    <td> <img src=https://github.com/user-attachments/assets/ec9a9c8d-eb94-4d18-9611-f2777d5be632  width=400/> </td>
+    <td> <img src=https://github.com/user-attachments/assets/ec9a9c8d-eb94-4d18-9611-f2777d5be632  width=600/> </td>
   </tr>
 
    <tr>
     <td> <img src=https://github.com/user-attachments/assets/5090d03c-29c9-43f3-a228-36a871b1dd61  width=200/> </td>
-    <td> <img src=https://github.com/user-attachments/assets/9e47e33f-2cdb-4f00-a5f7-93018d514e16  width=400/> </td>
+    <td> <img src=https://github.com/user-attachments/assets/9e47e33f-2cdb-4f00-a5f7-93018d514e16  width=600/> </td>
   </tr>
   
 </table>
