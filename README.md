@@ -34,7 +34,9 @@ Para testes E2E, foi utilizado o integration_test. Nesse teste, eu escrevi os 5 
 • ***Favoritar:***  flutter test integration_test/products/favorite_test.dart  
 • ***Pesquisar e Filtrar:***  flutter test integration_test/products/search_test.dart  
 • ***Visualizar detalhes:*** flutter test integration_test/products/details_test.dart  
-• ***Favoritar na Página de Detalhes:*** flutter test integration_test/products/details_favorite_test.dart 
+• ***Favoritar na Página de Detalhes:*** flutter test integration_test/products/details_favorite_test.dart
+
+***DEMO***: https://youtu.be/s0opguIHxsI
 
 ## Preveção de Erros, tratamentos e desenvolvimento de soluções
 
