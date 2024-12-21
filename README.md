@@ -108,8 +108,13 @@ Ao transformar o preço, o valor obtido deve ser em Dollar (Protótipo). Nesse c
 
 ***Package:*** https://pub.dev/packages/intl
 
+Tratamento 3:
 
+Mesmo criando o projeto atualizado, precisamos alterar algumas configurações do AGP para rodar em versões androids. Para isso vamos alterar a versão dele no settings.gradle
 
+<img src=https://github.com/user-attachments/assets/49bd2ff4-d874-4c7c-aa4b-caae48958a41  width=600/>
+
+<img src=https://github.com/user-attachments/assets/ab3f650f-35a8-4105-8534-8f4caa830bb7  width=800/>
 
 
 ## Layout e Responsividade
